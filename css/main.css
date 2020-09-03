@@ -99,7 +99,7 @@ body {
 }
 
 /* QUERIES */
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 1300px) {
     main {
         display: grid;
         grid-template-columns: 1fr 330px 1fr;
