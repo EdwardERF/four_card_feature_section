@@ -50,9 +50,11 @@ body {
     border-radius: 5px;
     background: white;
     width: 85%;
+    max-width: 280px;
+    min-width: 250px;
     margin: auto auto 2em;
     padding: 1.6em;
-    box-shadow: .2em .2em .4em 0 #e4e4e4;
+    box-shadow: .2em .2em .8em 0 #e4e4e4;
 }
 
 .card h1 {
@@ -94,4 +96,32 @@ body {
 
 .blue {
     border-top: 5px solid var(--primary-blue);
+}
+
+/* QUERIES */
+@media screen and (min-width: 375px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 330px 1fr;
+        grid-template-areas: 'first-column second-column-r1 third-column'
+                             'first-column second-column-r2 third-column';
+    }
+
+    .cyan {
+        grid-area: first-column;
+        margin: auto 30px auto auto;
+    }
+    
+    .red {
+        grid-area: second-column-r1;
+    }
+    
+    .orange {
+        grid-area: second-column-r2;
+    }
+    
+    .blue {
+        grid-area: third-column;
+        margin: auto auto auto 30px;
+    }
 }
